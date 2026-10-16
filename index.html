@@ -38,40 +38,7 @@
             </p>
 
 
-            <script>
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    window.location.href = "home.html";
-});
-</script>
-                <!-- البريد -->
-                <label for="email">
-                    البريد الإلكتروني
-                </label>
-
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="example@gmail.com"
-                    required
-                >
-
-
-                <!-- الباسورد -->
-                <label for="password">
-                    كلمة المرور
-                </label>
-
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="••••••••"
-                    required
-                >
-
-
-                <!-- زر الدخول -->
-          <button type="button" onclick="login()">
+          <Button  " onclick="login()">
     دخول إلى طمأنينة
 </button>
                
@@ -81,19 +48,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
         </div>
 
     </div>
-</script>
-<script>
-function login() {
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    if (email === "" || password === "") {
-        alert("أدخلي البريد الإلكتروني وكلمة المرور");
-    } else {
-        window.location.href = "home.html";
-    }
-}
-</script>
+<a href="Home.html">
 </body>
 
 </html>
