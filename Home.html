@@ -1,219 +1,37 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>طمأنينة | الرئيسية</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>الرئيسية - طمأنينة</title>
 </head>
+<body>
+
+    <h1>مرحباً بكِ في طمأنينة</h1>
+    <p>هنا تجدين مساحة للذكر والتأمل والراحة.</p>
+
+    <nav>
+        <a href="Home.html">الرئيسية</a> |
+        <a href="adhkar.html">الأذكار</a> |
+        <a href="ayat.html">آيات قرآنية</a> |
+        <a href="Journal.html">يومياتي</a> |
+        <a href="message.html">رسائل طمأنينة</a> |
+        <a href="Contact.html">تواصل معنا</a> |
+        <a href="index.html">تسجيل الخروج</a>
+    </nav>
+
+    <h2>ابدئي يومك بالسكينة</h2>
+    <p>اجعلي لروحك نصيباً من الذكر والقرآن والراحة.</p>
+
+    <ul>
+        <li><a href="adhkar.html">اقرئي أذكارك</a></li>
+        <li><a href="ayat.html">تأملي آيات من القرآن</a></li>
+        <li><a href="Journal.html">اكتبي يومياتك</a></li>
+        <li><a href="message.html">اقرئي رسالة اليوم</a></li>
+    </ul>
 
-<body class="home-page">
-
-    <!-- القائمة العلوية -->
-    <header class="navbar">
-
-        <div class="brand">
-            🌿 طمأنينة
-        </div>
-
-        <nav>
-            <a href="home.html">الرئيسية</a>
-            <a href="contact.html">اتصل بنا</a>
-            <a href="index.html">تسجيل الدخول</a>
-        </nav>
-
-    </header>
-
-
-    <!-- الترحيب -->
-    <section class="welcome">
-
-        <div class="welcome-decoration">۞</div>
-
-        <h1>أهلاً بك في طمأنينة 🤍</h1>
-
-        <p>
-            خذي نفساً عميقاً، وامنحي قلبك لحظة من السكينة.
-        </p>
-
-        <div class="verse">
-            ﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾
-
-            <small>سورة الرعد - الآية 28</small>
-        </div>
-
-    </section>
-
-
-    <!-- أقسام الموقع -->
-    <main class="sections">
-
-        <h2>مساحتك للسكينة 🌸</h2>
-
-        <p class="section-description">
-            اختاري القسم الذي يحتاجه قلبك اليوم.
-        </p>
-
-
-        <div class="cards">
-
-            <!-- الأذكار -->
-            <a href="adhkar.html" class="card">
-
-                <span class="card-icon">📿</span>
-
-                <h3>الأذكار</h3>
-
-                <p>
-                    اجعلي لسانك عامراً بذكر الله.
-                </p>
-
-                <span class="card-link">ابدئي الأذكار ←</span>
-
-            </a>
-
-
-            <!-- القصص -->
-            <a href="stories.html" class="card">
-
-                <span class="card-icon">📖</span>
-
-                <h3>قصص الأنبياء</h3>
-
-                <p>
-                    قصص مليئة بالإيمان والصبر والأمل.
-                </p>
-
-                <span class="card-link">اكتشفي القصص ←</span>
-
-            </a>
-
-
-            <!-- الآيات -->
-            <a href="ayat.html" class="card">
-
-                <span class="card-icon">🌙</span>
-
-                <h3>آيات الطمأنينة</h3>
-
-                <p>
-                    آيات تذكّر القلب برحمة الله وفضله.
-                </p>
-
-                <span class="card-link">اقرئي الآيات ←</span>
-
-            </a>
-
-
-            <!-- الرسائل -->
-            <a href="messages.html" class="card">
-
-                <span class="card-icon">🤍</span>
-
-                <h3>رسائل لقلبك</h3>
-
-                <p>
-                    كلمات لطيفة تمنحك الأمل والتفاؤل.
-                </p>
-
-                <span class="card-link">اقرئي رسالتك ←</span>
-
-            </a>
-
-        </div>
-
-    </main>
-  <!-- مساحة الدعم النفسي -->
-<section class="wellness-section" id="wellness">
-
-    <div class="wellness-heading">
-        <span>🤍 مساحة آمنة للجميع</span>
-        <h2>كيف حالك اليوم؟</h2>
-        <p>اختار الشعور الأقرب ليك، وخليّنا نبدأ مع بعض خطوة صغيرة.</p>
-    </div>
-
-    <div class="mood-grid">
-
-        <button class="mood-card" onclick="showMood('sad')">
-            <span>😔</span>
-            <h3>حزين</h3>
-            <p>محتاج كلام يواسيني</p>
-        </button>
-
-        <button class="mood-card" onclick="showMood('anxious')">
-            <span>😰</span>
-            <h3>قلقان</h3>
-            <p>أفكاري ما بتوقف</p>
-        </button>
-
-        <button class="mood-card" onclick="showMood('stressed')">
-            <span>😣</span>
-            <h3>مضغوط</h3>
-            <p>حاسس إنو كل شيء كتير</p>
-        </button>
-
-        <button class="mood-card" onclick="showMood('happy')">
-            <span>😊</span>
-            <h3>سعيد</h3>
-            <p>داير أشارك اللحظة الحلوة</p>
-        </button>
-
-        <button class="mood-card" onclick="showMood('tired')">
-            <span>😴</span>
-            <h3>مرهق</h3>
-            <p>محتاج أرتاح شوية</p>
-        </button>
-
-        <button class="mood-card" onclick="showMood('confused')">
-            <span>😶</span>
-            <h3>مشاعري ملخبطة</h3>
-            <p>ما عارف حاسس بشنو</p>
-        </button>
-
-        <button class="mood-card" onclick="showMood('lonely')">
-            <span>🫂</span>
-            <h3>حاسس بالوحدة</h3>
-            <p>محتاج أحس إني ما برايي</p>
-        </button>
-
-        <button class="mood-card" onclick="showMood('motivation')">
-            <span>🌱</span>
-            <h3>محتاج تحفيز</h3>
-            <p>داير أبدأ من جديد</p>
-        </button>
-
-    </div>
-
-    <!-- مكان ظهور الدعم المناسب للشعور -->
-    <div class="support-box" id="supportBox" aria-live="polite">
-
-        <div class="support-icon">🌿</div>
-
-        <h3>مساحتك للراحة والطمأنينة</h3>
-
-        <p>
-            ما ضروري تكون عارف كل الإجابات هسع.
-            اختار الشعور الأقرب ليك، ونبدأ بخطوة بسيطة.
-        </p>
-
-    </div>
-
-</section>
-
-    <footer class="footer">
-
-        <div>۞</div>
-
-        <p>طمأنينة | مساحة صغيرة لقلبك 🤍</p>
-
-        <p>نسأل الله أن يجعل في قلوبكم سكينة وفي أيامكم بركة.</p>
-
-    </footer>
-  
-<script src="main.js"></script>
 </body>
-
 </html>
+                
+
+    
