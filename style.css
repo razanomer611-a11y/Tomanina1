@@ -1,0 +1,866 @@
+/* ===================================
+   GENERAL
+=================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f6f1;
+    color: #395b4f;
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* ===================================
+   1. LOGIN PAGE
+=================================== */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf3ef,
+            #f8f3e9
+        );
+
+    padding: 20px;
+}
+
+
+/* الحاوية */
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+
+    text-align: center;
+}
+
+
+/* الشعار */
+
+.logo {
+    color: #789f91;
+    font-size: 42px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+/* الجملة تحت الشعار */
+
+.welcome-text {
+    color: #888;
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+/* صندوق تسجيل الدخول */
+
+.login-box {
+    background-color: white;
+
+    padding: 40px 30px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* العنوان */
+
+.login-box h1 {
+    color: #395b4f;
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+/* النص */
+
+.login-box p {
+    color: #888;
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* Labels */
+
+.login-box label {
+    display: block;
+
+    text-align: right;
+
+    color: #395b4f;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+
+/* Inputs */
+
+.login-box input {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 15px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background-color: #fafafa;
+}
+
+
+/* لما نضغط داخل الحقل */
+
+.login-box input:focus {
+    border-color: #789f91;
+
+    background-color: white;
+}
+
+
+/* زر الدخول */
+
+.login-box button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #789f91;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* عند تمرير الماوس */
+
+.login-box button:hover {
+    background-color: #5f8878;
+}
+
+
+/* ===================================
+   2. HOME PAGE - HEADER
+=================================== */
+
+header {
+    width: 100%;
+
+    background-color: white;
+
+    padding: 20px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* شعار الهيدر */
+
+header .logo {
+    font-size: 35px;
+
+    margin: 0;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* روابط القائمة */
+
+nav a {
+    color: #777;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+
+/* الرابط النشط */
+
+nav a.active {
+    color: #789f91;
+
+    font-weight: bold;
+}
+
+
+/* Hover */
+
+nav a:hover {
+    color: #789f91;
+}
+
+
+/* ===================================
+   HOME MAIN
+=================================== */
+
+main {
+    width: 92%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding-bottom: 50px;
+}
+
+
+/* ===================================
+   VERSE CARD
+=================================== */
+
+.verse-card {
+    margin-top: 30px;
+
+    padding: 65px 25px;
+
+    text-align: center;
+
+    border-radius: 0 0 40px 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0eee5,
+            #e8f0eb
+        );
+}
+
+
+/* آية اليوم */
+
+.small-title {
+    color: #c5b89f;
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+/* نص الآية */
+
+.verse-card h1 {
+    color: #395b4f;
+
+    font-size: 38px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+/* المصدر */
+
+.verse-card p {
+    color: #999;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+/* زر آية أخرى */
+
+.outline-btn {
+    padding: 13px 35px;
+
+    border-radius: 30px;
+
+    border: 2px solid #8baa9f;
+
+    background-color: white;
+
+    color: #789f91;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.outline-btn:hover {
+    background-color: #789f91;
+
+    color: white;
+}
+
+
+/* ===================================
+   FEELING CARD
+=================================== */
+
+.feeling-card {
+    margin-top: 35px;
+
+    padding: 40px 25px;
+
+    background-color: white;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.feeling-card h2 {
+    color: #395b4f;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.feeling-card > p {
+    color: #777;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+/* أزرار الحالات */
+
+.feelings {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+
+.feelings button {
+    width: 110px;
+
+    padding: 15px 10px;
+
+    border: 1px solid #e0e6e2;
+
+    border-radius: 20px;
+
+    background-color: #f5f8f5;
+
+    color: #395b4f;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* الإيموجي */
+
+.feelings button:first-line {
+    font-size: 25px;
+}
+
+
+.feelings button span {
+    display: block;
+
+    margin-top: 8px;
+}
+
+
+.feelings button:hover {
+    background-color: #789f91;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* رسالة الحالة */
+
+#feelingMessage {
+    margin-top: 25px;
+
+    color: #52776a;
+
+    font-size: 19px;
+
+    line-height: 2;
+}
+
+
+/* ===================================
+   COUNTER
+=================================== */
+
+.counter-card {
+    margin-top: 35px;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background-color: #395b4f;
+
+    color: white;
+}
+
+
+.counter-card h2 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.counter-card p {
+    opacity: 0.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* الدائرة */
+
+.counter {
+    width: 155px;
+
+    height: 155px;
+
+    margin: 25px auto;
+
+    border: 4px solid #d5c5a5;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* الرقم */
+
+.counter span {
+    font-size: 48px;
+
+    color: white;
+}
+
+
+/* ===================================
+   MAIN BUTTON
+=================================== */
+
+.main-btn {
+    display: inline-block;
+
+    padding: 14px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #789f91;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.main-btn:hover {
+    background-color: #5f8878;
+
+    transform: translateY(-2px);
+}
+
+
+/* ===================================
+   CONTENT SECTIONS
+=================================== */
+
+.content-section {
+    margin-top: 35px;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.content-section h2 {
+    color: #395b4f;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+.content-section > p {
+    color: #666;
+
+    line-height: 2;
+
+    font-size: 17px;
+}
+
+
+/* الذكر */
+
+.item {
+    padding: 18px;
+
+    margin-top: 15px;
+
+    border-radius: 15px;
+
+    background-color: #f1f5f1;
+
+    transition: 0.3s;
+}
+
+
+.item:hover {
+    transform: translateX(-5px);
+
+    background-color: #e8f0eb;
+}
+
+
+.item p {
+    color: #395b4f;
+
+    font-size: 18px;
+}
+
+
+/* رسالة القصة */
+
+#storyMessage {
+    margin-top: 20px;
+
+    color: #52776a;
+
+    line-height: 2;
+}
+
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background-color: #395b4f;
+
+    color: white;
+}
+
+
+footer p {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+footer a {
+    color: white;
+
+    border-bottom: 1px solid white;
+
+    padding-bottom: 3px;
+}
+
+
+/* ===================================
+   3. LOGOUT PAGE
+=================================== */
+
+.logout-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf3ef,
+            #f8f3e9
+        );
+}
+
+
+/* صندوق الخروج */
+
+.logout-box {
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 50px 30px;
+
+    background-color: white;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* الأيقونة */
+
+.logout-icon {
+    width: 90px;
+
+    height: 90px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background-color: #edf3ef;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 45px;
+}
+
+
+.logout-box h1 {
+    color: #395b4f;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+.logout-box p {
+    color: #777;
+
+    line-height: 2;
+
+    margin-bottom: 8px;
+}
+
+
+/* زر العودة */
+
+.logout-box .main-btn {
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 600px) {
+
+    /* LOGIN */
+
+    .login-box {
+        padding: 30px 20px;
+    }
+
+
+    .logo {
+        font-size: 36px;
+    }
+
+
+    /* HEADER */
+
+    header {
+        padding: 18px 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    header .logo {
+        font-size: 32px;
+    }
+
+
+    nav {
+        gap: 15px;
+    }
+
+
+    nav a {
+        font-size: 15px;
+    }
+
+
+    /* VERSE */
+
+    .verse-card {
+        padding: 45px 15px;
+    }
+
+
+    .verse-card h1 {
+        font-size: 27px;
+
+        line-height: 1.8;
+    }
+
+
+    /* FEELINGS */
+
+    .feelings {
+        gap: 10px;
+    }
+
+
+    .feelings button {
+        width: 90px;
+
+        font-size: 15px;
+    }
+
+
+    /* COUNTER */
+
+    .counter {
+        width: 130px;
+
+        height: 130px;
+    }
+
+
+    .counter span {
+        font-size: 40px;
+    }
+
+
+    /* SECTIONS */
+
+    .content-section {
+        padding: 25px 20px;
+    }
+
+
+    .content-section h2 {
+        font-size: 24px;
+    }
+
+}
