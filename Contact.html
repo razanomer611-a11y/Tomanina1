@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - طمأنينة</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>🌿 طمأنينة</h2>
+
+        <nav>
+            <a href="Home.html">الرئيسية</a>
+            <a href="contact.html">اتصل بنا</a>
+            <a href="index.html">تسجيل الخروج</a>
+        </nav>
+    </header>
+
+    <section class="contact">
+
+        <h1>تواصلي معنا 🤍</h1>
+
+        <p>
+            يسعدنا سماع آرائكم واقتراحاتكم
+            لتطوير موقع طمأنينة.
+        </p>
+
+        <form action="contact.php" method="POST">
+
+            <label>الاسم</label>
+            <input type="text" name="name"
+                   placeholder="أدخلي اسمك" required>
+
+            <label>البريد الإلكتروني</label>
+            <input type="email" name="email"
+                   placeholder="أدخلي بريدك الإلكتروني" required>
+
+            <label>الموضوع</label>
+            <input type="text" name="subject"
+                   placeholder="موضوع الرسالة" required>
+
+            <label>رسالتك</label>
+            <textarea name="message"
+                      placeholder="اكتبي رسالتك هنا"
+                      rows="5" required></textarea>
+
+            <button type="submit">إرسال الرسالة</button>
+
+        </form>
+
+    </section>
+
+    <footer>
+        <p>طمأنينة 🤍 مساحة للسكينة وراحة القلب</p>
+    </footer>
+
+</body>
+</html>

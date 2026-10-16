@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>طمأنينة | الرئيسية</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home-page">
+
+    <!-- القائمة العلوية -->
+    <header class="navbar">
+
+        <div class="brand">
+            🌿 طمأنينة
+        </div>
+
+        <nav>
+            <a href="home.html">الرئيسية</a>
+            <a href="contact.html">اتصل بنا</a>
+            <a href="index.html">تسجيل الخروج</a>
+        </nav>
+
+    </header>
+
+
+    <!-- الترحيب -->
+    <section class="welcome">
+
+        <div class="welcome-decoration">۞</div>
+
+        <h1>أهلاً بك في طمأنينة 🤍</h1>
+
+        <p>
+            خذي نفساً عميقاً، وامنحي قلبك لحظة من السكينة.
+        </p>
+
+        <div class="verse">
+            ﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾
+
+            <small>سورة الرعد - الآية 28</small>
+        </div>
+
+    </section>
+
+
+    <!-- أقسام الموقع -->
+    <main class="sections">
+
+        <h2>مساحتك للسكينة 🌸</h2>
+
+        <p class="section-description">
+            اختاري القسم الذي يحتاجه قلبك اليوم.
+        </p>
+
+
+        <div class="cards">
+
+            <!-- الأذكار -->
+            <a href="adhkar.html" class="card">
+
+                <span class="card-icon">📿</span>
+
+                <h3>الأذكار</h3>
+
+                <p>
+                    اجعلي لسانك عامراً بذكر الله.
+                </p>
+
+                <span class="card-link">ابدئي الأذكار ←</span>
+
+            </a>
+
+
+            <!-- القصص -->
+            <a href="stories.html" class="card">
+
+                <span class="card-icon">📖</span>
+
+                <h3>قصص الأنبياء</h3>
+
+                <p>
+                    قصص مليئة بالإيمان والصبر والأمل.
+                </p>
+
+                <span class="card-link">اكتشفي القصص ←</span>
+
+            </a>
+
+
+            <!-- الآيات -->
+            <a href="ayat.html" class="card">
+
+                <span class="card-icon">🌙</span>
+
+                <h3>آيات الطمأنينة</h3>
+
+                <p>
+                    آيات تذكّر القلب برحمة الله وفضله.
+                </p>
+
+                <span class="card-link">اقرئي الآيات ←</span>
+
+            </a>
+
+
+            <!-- الرسائل -->
+            <a href="messages.html" class="card">
+
+                <span class="card-icon">🤍</span>
+
+                <h3>رسائل لقلبك</h3>
+
+                <p>
+                    كلمات لطيفة تمنحك الأمل والتفاؤل.
+                </p>
+
+                <span class="card-link">اقرئي رسالتك ←</span>
+
+            </a>
+
+        </div>
+
+    </main>
+  <!-- مساحة الدعم النفسي -->
+<section class="wellness-section" id="wellness">
+
+    <div class="wellness-heading">
+        <span>🤍 مساحة آمنة للجميع</span>
+        <h2>كيف حالك اليوم؟</h2>
+        <p>اختار الشعور الأقرب ليك، وخليّنا نبدأ مع بعض خطوة صغيرة.</p>
+    </div>
+
+    <div class="mood-grid">
+
+        <button class="mood-card" onclick="showMood('sad')">
+            <span>😔</span>
+            <h3>حزين</h3>
+            <p>محتاج كلام يواسيني</p>
+        </button>
+
+        <button class="mood-card" onclick="showMood('anxious')">
+            <span>😰</span>
+            <h3>قلقان</h3>
+            <p>أفكاري ما بتوقف</p>
+        </button>
+
+        <button class="mood-card" onclick="showMood('stressed')">
+            <span>😣</span>
+            <h3>مضغوط</h3>
+            <p>حاسس إنو كل شيء كتير</p>
+        </button>
+
+        <button class="mood-card" onclick="showMood('happy')">
+            <span>😊</span>
+            <h3>سعيد</h3>
+            <p>داير أشارك اللحظة الحلوة</p>
+        </button>
+
+        <button class="mood-card" onclick="showMood('tired')">
+            <span>😴</span>
+            <h3>مرهق</h3>
+            <p>محتاج أرتاح شوية</p>
+        </button>
+
+        <button class="mood-card" onclick="showMood('confused')">
+            <span>😶</span>
+            <h3>مشاعري ملخبطة</h3>
+            <p>ما عارف حاسس بشنو</p>
+        </button>
+
+        <button class="mood-card" onclick="showMood('lonely')">
+            <span>🫂</span>
+            <h3>حاسس بالوحدة</h3>
+            <p>محتاج أحس إني ما برايي</p>
+        </button>
+
+        <button class="mood-card" onclick="showMood('motivation')">
+            <span>🌱</span>
+            <h3>محتاج تحفيز</h3>
+            <p>داير أبدأ من جديد</p>
+        </button>
+
+    </div>
+
+    <!-- مكان ظهور الدعم المناسب للشعور -->
+    <div class="support-box" id="supportBox" aria-live="polite">
+
+        <div class="support-icon">🌿</div>
+
+        <h3>مساحتك للراحة والطمأنينة</h3>
+
+        <p>
+            ما ضروري تكون عارف كل الإجابات هسع.
+            اختار الشعور الأقرب ليك، ونبدأ بخطوة بسيطة.
+        </p>
+
+    </div>
+
+</section>
+
+<style>
+    .wellness-section {
+        padding: 35px 18px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .wellness-heading {
+        text-align: center;
+        line-height: 2;
+        margin-bottom: 25px;
+    }
+
+    .wellness-heading > span {
+        color: #64836a;
+    }
+
+    .wellness-heading h2 {
+        color: #52745b;
+        font-size: 28px;
+        margin: 8px 0;
+    }
+
+    .mood-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .mood-card {
+        background: #fffdf7;
+        border: 1px solid #dfe7db;
+        border-radius: 18px;
+        padding: 18px 8px;
+        text-align: center;
+        font-family: inherit;
+        color: #526254;
+        cursor: pointer;
+        transition: transform 0.2s, background 0.2s;
+    }
+
+    .mood-card:hover {
+        background: #edf3e9;
+        transform: translateY(-3px);
+    }
+
+    .mood-card:focus-visible {
+        outline: 3px solid #64836a;
+        outline-offset: 3px;
+    }
+
+    .mood-card span {
+        font-size: 34px;
+    }
+
+    .mood-card h3 {
+        margin: 8px 0;
+        font-size: 17px;
+    }
+
+    .mood-card p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .support-box {
+        background: #f2f5ed;
+        border: 1px solid #dfe7db;
+        border-radius: 20px;
+        padding: 25px 20px;
+        margin-top: 25px;
+        text-align: center;
+        line-height: 2;
+        color: #4e5e4f;
+        scroll-margin-top: 20px;
+    }
+
+    .support-icon {
+        font-size: 38px;
+    }
+
+    .support-box h3 {
+        color: #52745b;
+    }
+
+    .support-box p {
+        line-height: 2;
+    }
+
+    .support-box .exercise {
+        background: #fffdf7;
+        border-radius: 12px;
+        padding: 15px;
+        margin-top: 15px;
+        text-align: right;
+    }
+
+    .support-box .reset-button {
+        background: #64836a;
+        color: white;
+        border: none;
+        padding: 11px 20px;
+        border-radius: 10px;
+        font-family: inherit;
+        cursor: pointer;
+        margin-top: 12px;
+    }
+
+    @media (min-width: 650px) {
+        .mood-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+</style>
+
+<script>
+    const moodContent = {
+        sad: {
+            icon: "💚",
+            title: "ما لازم تواجه الحزن برايك",
+            message: "الحزن شعور إنساني طبيعي، وما معناهو إنك ضعيف. ما مطلوب منك تكون بخير طول الوقت. ادي نفسك مساحة تحس وتعبّر.",
+            exercise: "خطوة بسيطة: اكتب أو فكّر في الشيء المضايقك. لو قدرت، اتكلم مع شخص بتثق فيه. ما لازم تحل كل شيء الليلة."
+        },
+
+        anxious: {
+            icon: "🌿",
+            title: "خلينا نهدأ خطوة خطوة",
+            message: "لما القلق يزيد، ممكن تحس إنو كل شيء لازم يتحل هسع. لكن ما ضروري. خلينا نرجع للحظة الحالية.",
+            exercise: "تمرين بسيط: حط رجليك على الأرض. خذ شهيقًا مريحًا، وبعدها أخرج الزفير ببطء من غير ما تجبر نفسك. كرر عدة مرات حسب راحتك، ولا تحبس نفسك."
+        },
+
+        stressed: {
+            icon: "🪴",
+            title: "ما لازم تعمل كل شيء مرة واحدة",
+            message: "كثرة المسؤوليات ممكن تتعب أي زول. حاول تفرّق بين الحاجات المستعجلة والحاجات الممكن تنتظر.",
+            exercise: "اكتب 3 حاجات شاغلة بالك. اختار منها حاجة صغيرة ممكن تبدأ فيها خلال 5 دقائق، وخلي الباقي لوقته."
+        },
+
+        happy: {
+            icon: "☀️",
+            title: "جميل إنك حاسس بالسعادة!",
+            message: "اسمح لنفسك تستمتع باللحظات الحلوة من غير ما تقلق من بكرة. اللحظات البسيطة برضو عندها قيمة.",
+            exercise: "خطوة جميلة: اكتب 3 حاجات أسعدتك اليوم، أو شارك اللحظة الحلوة مع شخص عزيز عليك."
+        },
+
+        tired: {
+            icon: "🌙",
+            title: "الراحة جزء من الطريق",
+            message: "التعب ما معناهو إنك فشلت. أحيانًا جسمك وعقلك محتاجين وقفة وراحة.",
+            exercise: "خطوة بسيطة: اشرب موية لو محتاج، أبعد عن الشاشة شوية، وخذ استراحة مناسبة. ما تلزم نفسك بإنجاز كل شيء الآن."
+        },
+
+        confused: {
+            icon: "☁️",
+            title: "ما ضروري تفهم كل مشاعرك فورًا",
+            message: "ممكن تحس بأكتر من شعور في نفس الوقت، وممكن ما تعرف تسمي الشعور. دا ما غلط.",
+            exercise: "اسأل نفسك: شنو الحاصل معاي الآن؟ شنو الحاسس بيه في جسمي؟ وشنو الحاجة البسيطة الممكن تساعدني؟ ما في إجابة صحيحة أو خاطئة."
+        },
+
+        lonely: {
+            icon: "🤝",
+            title: "إحساس الوحدة ممكن يكون متعب",
+            message: "حتى لو حسيت إنك بعيد من الناس، مشاعرك مهمة وتستحق الاهتمام. ما لازم تمر بكل شيء برايك.",
+            exercise: "خطوة بسيطة: أرسل رسالة لشخص بتثق فيه، حتى لو كانت مجرد: «عامل شنو؟ محتاج أتكلم شوية». ولو ما قدرت الآن، ابدأ بالخطوة البتريحك."
+        },
+
+        motivation: {
+            icon: "🌱",
+            title: "ابدأ صغير، لكن ابدأ براحتك",
+            message: "ما محتاج تغيّر حياتك كلها في يوم واحد. التقدم البسيط برضو تقدم، والتعثر ما بيلغي مجهودك.",
+            exercise: "اختار هدفًا صغيرًا تقدر تبدأ فيه اليوم، وحدد أول خطوة بس. ما تقارن بدايتك بمشوار زول تاني."
+        }
+    };
+
+    function showMood(mood) {
+        const content = moodContent[mood];
+        const box = document.getElementById("supportBox");
+
+        if (!content || !box) return;
+
+        box.innerHTML = `
+            <div class="support-icon">${content.icon}</div>
+            <h3>${content.title}</h3>
+            <p>${content.message}</p>
+
+            <div class="exercise">
+                <strong>🌿 جرّب الخطوة دي:</strong>
+                <p>${content.exercise}</p>
+            </div>
+
+            <button class="reset-button" onclick="resetMood()">
+                اختيار شعور تاني
+            </button>
+        `;
+
+        box.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    }
+
+    function resetMood() {
+        document.getElementById("supportBox").innerHTML = `
+            <div class="support-icon">🌿</div>
+            <h3>مساحتك للراحة والطمأنينة</h3>
+            <p>
+                ما ضروري تكون عارف كل الإجابات هسع.
+                اختار الشعور الأقرب ليك، ونبدأ بخطوة بسيطة.
+            </p>
+        `;
+
+        document.getElementById("wellness").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+</script>
+
+
+    <!-- نهاية الصفحة -->
+    <footer class="footer">
+
+        <div>۞</div>
+
+        <p>طمأنينة | مساحة صغيرة لقلبك 🤍</p>
+
+        <p>نسأل الله أن يجعل في قلوبكم سكينة وفي أيامكم بركة.</p>
+
+    </footer>
+  
+<script src="main.js"></script>
+</body>
+
+</html>
