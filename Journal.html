@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يومياتي</title>
+</head>
+<body>
+
+    <h1>يومياتي</h1>
+
+    <nav>
+        <a href="Home.html">الرئيسية</a> |
+        <a href="adhkar.html">الأذكار</a> |
+        <a href="ayat.html">الآيات</a> |
+        <a href="Journal.html">يومياتي</a> |
+        <a href="message.html">الرسائل</a> |
+        <a href="Contact.html">التواصل</a> |
+        <a href="index.html">تسجيل الخروج</a>
+    </nav>
+
+    <h2>اكتبي ما تشعرين به اليوم</h2>
+
+    <form>
+        <label for="date">التاريخ:</label>
+        <input type="date" id="date">
+
+        <br><br>
+
+        <label for="diary">مساحة للكتابة:</label>
+
+        <br>
+
+        <textarea id="diary" rows="10" cols="35" placeholder="اكتبي أفكارك ومشاعرك هنا..."></textarea>
+
+        <br><br>
+
+        <button type="button" onclick="saveDiary()">حفظ اليوميات</button>
+    </form>
+
+    <h3>يومياتك المحفوظة</h3>
+    <div id="savedEntries"></div>
+
+    <script>
+        function saveDiary() {
+            const date = document.getElementById("date").value;
+            const diary = document.getElementById("diary").value;
+
+            if (!diary.trim()) {
+                alert("اكتبي شيئاً أولاً.");
+                return;
+            }
+
+            const entries = JSON.parse(localStorage.getItem("diaryEntries") || "[]");
+
+            entries.push({
+                date: date || new Date().toISOString().slice(0, 10),
+                text: diary
+            });
+
+            localStorage.setItem("diaryEntries", JSON.stringify(entries));
+
+            document.getElementById("diary").value = "";
+            showDiary();
+            alert("تم حفظ يومياتك على هذا الجهاز.");
+        }
+
+        function showDiary() {
+            const entries = JSON.parse(localStorage.getItem("diaryEntries") || "[]");
+            const container = document.getElementById("savedEntries");
+
+            container.replaceChildren();
+
+            entries.forEach(function(entry) {
+                const paragraph = document.createElement("p");
+                paragraph.textContent = entry.date + " — " + entry.text;
+                container.appendChild(paragraph);
+            });
+        }
+
+        showDiary();
+    </script>
+
+    <a href="Home.html">العودة إلى الرئيسية</a>
+
+</body>
+</html>
