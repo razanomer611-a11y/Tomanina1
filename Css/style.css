@@ -209,7 +209,7 @@ label {
 }
 
 /* صفحة تسجيل الدخول */
-.login-container {
+.index-container {
     width: 92%;
     max-width: 420px;
     margin: 50px auto;
@@ -219,13 +219,13 @@ label {
     border: 1px solid #e1e9e2;
 }
 
-.login-container h1 {
+.index-container h1 {
     color: #456b5d;
 }
 
 /* صفحات الأذكار والآيات */
 .dhikr,
-.ayah {
+.ayat{
     background-color: #ffffff;
     padding: 20px;
     margin: 18px auto;
