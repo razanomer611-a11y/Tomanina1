@@ -30,115 +30,25 @@
         <li><a href="Journal.html">اكتبي يومياتك</a></li>
         <li><a href="message.html">اقرئي رسالة اليوم</a></li>
     </ul>
-    <!-- بداية مساحة المشاعر -->
+    document.addEventListener("DOMContentLoaded", function () {
 
-<main class="feelings-container">
+    const cards = document.querySelectorAll(".mood-card");
 
-    <section class="feelings-intro">
-        <p class="welcome-note">🤍 مساحة آمنة للجميع</p>
+    cards.forEach(function (card) {
 
-        <h1>كيف حالك اليوم؟</h1>
+        card.addEventListener("click", function () {
 
-        <p>
-            اختاري الشعور الأقرب ليك، وخلينا نبدأ مع بعض
-            خطوة صغيرة نحو الراحة.
-        </p>
-    </section>
+            const mood = card.getAttribute("data-mood");
 
-    <!-- كروت المشاعر -->
+            alert("إنتِ حاسة بـ " + mood + " ❤️");
 
-    <section class="feelings-grid">
+        });
 
-        <button class="feeling-card"
-                onclick="showFeeling('sad')">
-            <span class="feeling-emoji">😔</span>
-            <h2>حزين</h2>
-            <p>محتاج كلام يواسيني</p>
-        </button>
+    });
 
-        <button class="feeling-card"
-                onclick="showFeeling('anxious')">
-            <span class="feeling-emoji">😰</span>
-            <h2>قلقان</h2>
-            <p>أفكاري ما بتوقف</p>
-        </button>
+});
 
-        <button class="feeling-card"
-                onclick="showFeeling('happy')">
-            <span class="feeling-emoji">😊</span>
-            <h2>سعيد</h2>
-            <p>داير أشارك اللحظة الحلوة</p>
-        </button>
-
-        <button class="feeling-card"
-                onclick="showFeeling('stressed')">
-            <span class="feeling-emoji">😣</span>
-            <h2>مضغوط</h2>
-            <p>حاسس إنو كل شيء كتير</p>
-        </button>
-
-        <button class="feeling-card"
-                onclick="showFeeling('confused')">
-            <span class="feeling-emoji">😶</span>
-            <h2>مشاعري ملخبطة</h2>
-            <p>ما عارف حاسس بشنو</p>
-        </button>
-
-        <button class="feeling-card"
-                onclick="showFeeling('tired')">
-            <span class="feeling-emoji">😴</span>
-            <h2>مرهق</h2>
-            <p>محتاج أرتاح شوية</p>
-        </button>
-
-        <button class="feeling-card"
-                onclick="showFeeling('hopeful')">
-            <span class="feeling-emoji">🌱</span>
-            <h2>محتاج أمل</h2>
-            <p>داير أبدأ من جديد</p>
-        </button>
-
-        <button class="feeling-card"
-                onclick="showFeeling('lonely')">
-            <span class="feeling-emoji">🫂</span>
-            <h2>حاسس بالوحدة</h2>
-            <p>محتاج أحس إنو في زول فاهمني</p>
-        </button>
-
-    </section>
-
-    <!-- مساحة الرسالة -->
-
-    <section id="feelingResult"
-             class="feeling-result"
-             aria-live="polite"
-             hidden>
-
-        <h2 id="feelingTitle"></h2>
-
-        <p id="feelingMessage"></p>
-
-        <div class="feeling-advice">
-            <h3>🌷 خطوة صغيرة ليك</h3>
-            <p id="feelingAdvice"></p>
-        </div>
-
-        <button type="button"
-                class="feeling-button"
-                onclick="showAnotherMessage()">
-            رسالة أخرى ❤️
-        </button>
-
-        <button type="button"
-                class="feeling-close"
-                onclick="closeFeeling()">
-            إغلاق
-        </button>
-
-    </section>
-
-</main>
-
+    
 <script src="js/Home.js"></script>
 </body>
 </html>
