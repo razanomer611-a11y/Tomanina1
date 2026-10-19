@@ -221,3 +221,238 @@ body:has(.journal-entry) textarea {
         padding: 18px;
     }
 }
+/* =====================================
+   كروت المشاعر - طمأنينة
+   ===================================== */
+
+.feelings-container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding-bottom: 35px;
+}
+
+.feelings-intro {
+    text-align: center;
+    margin: 25px auto 35px;
+}
+
+.feelings-intro .welcome-note {
+    color: #789080;
+    font-size: 20px;
+}
+
+.feelings-intro h1 {
+    color: #52796f;
+    font-size: 38px;
+    margin: 25px 0;
+}
+
+.feelings-intro > p:last-child {
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+/* شبكة الكروت */
+
+.feelings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 30px auto;
+}
+
+/* الكرت الواحد */
+
+.feeling-card {
+    width: 100%;
+    min-height: 220px;
+    padding: 22px 12px;
+    background-color: #fffdf8;
+    color: #354b42;
+    border: 1.5px solid #dce4d8;
+    border-radius: 28px;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.feeling-card:hover {
+    background-color: #edf4ee;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(53, 75, 66, 0.10);
+}
+
+.feeling-card:active {
+    transform: scale(0.97);
+}
+
+.feeling-card:focus-visible {
+    outline: 3px solid #52796f;
+    outline-offset: 4px;
+}
+
+.feeling-emoji {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.feeling-card h2 {
+    color: #536b5c;
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+.feeling-card p {
+    color: #667267;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* مساحة الرسائل بعد اختيار الشعور */
+
+.feeling-result {
+    background-color: #ffffff;
+    border: 1px solid #dce4d8;
+    border-radius: 24px;
+    padding: 25px;
+    margin: 35px auto;
+    box-shadow: 0 5px 18px rgba(53, 75, 66, 0.06);
+    animation: feelingAppear 0.35s ease;
+}
+
+.feeling-result[hidden] {
+    display: none;
+}
+
+.feeling-result h2 {
+    color: #52796f;
+    font-size: 28px;
+    text-align: center;
+}
+
+#feelingMessage {
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.feeling-advice {
+    background-color: #edf4ee;
+    border-right: 5px solid #84a98c;
+    border-radius: 14px;
+    padding: 15px 18px;
+    margin: 20px 0;
+}
+
+.feeling-advice h3 {
+    color: #456b5d;
+    margin-top: 0;
+}
+
+.feeling-advice p {
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+/* أزرار الرسائل */
+
+.feeling-button,
+.feeling-close {
+    margin: 8px 4px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feeling-button {
+    background-color: #52796f;
+    color: #ffffff;
+}
+
+.feeling-button:hover {
+    background-color: #354f52;
+}
+
+.feeling-close {
+    background-color: #e5ece5;
+    color: #354b42;
+}
+
+.feeling-button:focus-visible,
+.feeling-close:focus-visible {
+    outline: 3px solid #84a98c;
+    outline-offset: 3px;
+}
+
+/* حركة ظهور الرسالة */
+
+@keyframes feelingAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ملاءمة الهواتف */
+
+@media screen and (max-width: 600px) {
+
+    .feelings-container {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    .feelings-intro h1 {
+        font-size: 30px;
+    }
+
+    .feelings-intro > p:last-child {
+        font-size: 17px;
+    }
+
+    .feelings-grid {
+        gap: 14px;
+    }
+
+    .feeling-card {
+        min-height: 190px;
+        padding: 18px 8px;
+        border-radius: 24px;
+    }
+
+    .feeling-emoji {
+        font-size: 40px;
+    }
+
+    .feeling-card h2 {
+        font-size: 20px;
+    }
+
+    .feeling-card p {
+        font-size: 14px;
+    }
+
+    .feeling-result {
+        padding: 18px;
+    }
+
+    #feelingMessage {
+        font-size: 18px;
+    }
+}
